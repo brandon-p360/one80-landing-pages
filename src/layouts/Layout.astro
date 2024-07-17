@@ -1,17 +1,27 @@
 ---
+import "../scss/styles.scss";
+
 interface Props {
 	title: string;
+	description: string;
+	redirectURL?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, redirectURL } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{
+			redirectURL && (
+				<meta http-equiv="refresh" content={`5;url=${redirectURL}`}>
+			)
+		}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>

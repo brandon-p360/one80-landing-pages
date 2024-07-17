@@ -1,0 +1,31 @@
+header {
+    position: relative;
+    background-color: var(--white);
+    // height: 113px;
+    padding: 20px 0 20px;
+
+    .header-content {
+        align-items: center;
+        column-gap: 60px;
+        display: flex;
+        justify-content: center;
+
+        .logo {
+            width: 240px;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--white);
+        transform: translateX(-50%) rotate(45deg);
+        height: 40px;
+        width: 40px;
+
+        bottom: -20px;
+        left: 50%;
+
+
+    }
+}
