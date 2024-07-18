@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Picture } from 'astro:assets';
+
+import Style from "../scss/pages/advancedesgroup.com.module.scss";
+
+import bgImg from "../assets/images/aesins.com/CincinnatiIntermediaries.jpg";
+import logo from "../assets/images/aesins.com/advanced-e-s-logo.png";
+import One80Logo from "../assets/images/one80-logo.png";
+---
+
+<Layout 
+    title="AESINS"
+    description="Advanced E&S Group is a division of Risk Strategies with over 30 specialty practices and access to all major insurance markets"
+    redirectURL="http://www.one80intermediaries.com/"
+>
+    <header>
+        <div class="header-content">
+            <div class="logo company-logo">
+                <Picture 
+                    src={logo}
+                    alt=""
+                />
+            </div>
+            <div class="logo one80-logo">
+                <Picture
+                    src={One80Logo}
+                    alt=""
+                />
+            </div>
+        </div>
+    </header>
+    <div class="background-image">
+        <Picture 
+            src={bgImg}
+            alt=""
+        />
+    </div>
+	<main>
+        <div class="container">
+            <div class="box dark-bg">
+                <h3 class="company-name">Advanced E&S Group</h3>
+                <p class="box-text">is now a part of One80 Intermediaries</p>
+                <a href="http://www.one80intermediaries.com/" class="btn box-btn light-bg">
+                    Go to Site
+                </a>
+            </div>
+        </div>
+    </main>
+</Layout>
