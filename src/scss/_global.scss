@@ -21,5 +21,9 @@ img {
         border-radius: 5px;
         padding: 20px 40px;
         width: initial;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
