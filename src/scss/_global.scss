@@ -15,4 +15,11 @@ img {
     text-decoration: none;
     padding: 10px 20px;
     width: 60%;
+
+    &.green-variant-btn {
+        background-color: var(--light-green);
+        border-radius: 5px;
+        padding: 20px 40px;
+        width: initial;
+    }
 }

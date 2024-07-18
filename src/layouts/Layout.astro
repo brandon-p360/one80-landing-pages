@@ -5,9 +5,10 @@ interface Props {
 	title: string;
 	description: string;
 	redirectURL?: string;
+	enableFontAwesome?: boolean;
 }
 
-const { title, description, redirectURL } = Astro.props;
+const { title, description, redirectURL, enableFontAwesome } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,6 +24,11 @@ const { title, description, redirectURL } = Astro.props;
 			)
 		}
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		{
+			enableFontAwesome && (
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+			)
+		}
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
